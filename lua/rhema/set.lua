@@ -27,3 +27,9 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
+
+vim.opt.title = true
+vim.opt.titlelen = 0 -- do not shorten title
+vim.opt.titlestring = 'nvim %{expand("%")}'
+
+vim.opt.cursorline = true
