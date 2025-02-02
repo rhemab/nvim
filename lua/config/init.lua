@@ -1,6 +1,6 @@
-require("rhema.set")
-require("rhema.remap")
-require("rhema.lazy_init")
+require("config.set")
+require("config.remap")
+require("config.lazy_init")
 require("onedark").load()
 
 local augroup = vim.api.nvim_create_augroup
