@@ -117,12 +117,12 @@ return {
 			cmp_lsp.default_capabilities()
 		)
 
+		require("lspconfig").gdscript.setup(capabilities)
 		require("fidget").setup({})
 		require("mason").setup()
 		require("mason-lspconfig").setup({
 			ensure_installed = {
 				"lua_ls",
-				"rust_analyzer",
 				"gopls",
 			},
 			handlers = {
@@ -157,11 +157,12 @@ return {
 					require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
 				end,
 			},
+			completion = { autocomplete = false, completeopt = "menu,menuone,noinsert" },
 			mapping = cmp.mapping.preset.insert({
 				["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
 				["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
-				["<CR>"] = cmp.mapping.confirm({ select = true }),
-				["<C-Space>"] = cmp.mapping.complete(),
+				-- ["<CR>"] = cmp.mapping.confirm({ select = true }),
+				["<C-CR>"] = cmp.mapping.complete(),
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
