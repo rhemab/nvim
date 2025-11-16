@@ -23,7 +23,7 @@ return {
 		local builtin = require("telescope.builtin")
 		vim.keymap.set("n", "<leader>th", builtin.help_tags, { desc = "[S]earch [H]elp" })
 		vim.keymap.set("n", "<leader>tk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
-		vim.keymap.set("n", "<C-f>", builtin.find_files, { desc = "[S]earch [F]iles" })
+		vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "[S]earch [F]iles" })
 		vim.keymap.set("n", "<leader>g", builtin.git_files, { desc = "[S]earch [G]it Files" })
 		vim.keymap.set("n", "<leader>ts", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
 		vim.keymap.set("n", "<leader>tw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
